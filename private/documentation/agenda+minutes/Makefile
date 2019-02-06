@@ -13,12 +13,9 @@ MINUTES_SRCS = $(shell find $(MINUTES_DIR) -name '*.tex')
 main.pdf: main.tex $(TEMPLATE_SRCS) $(INCLUDE_SRCS) $(AGENDA_SRCS) $(MINUTES_SRCS)
 	$(CC) $<
 	make fresh
-   
-cv.pdf: $(files_DIR)/cv.tex $(CV_SRCS)
 
-
-coverletter.pdf: $(files_DIR)/coverletter.tex
-	$(CC) -output-directory=$(files_DIR) $<
+meetingVersion: meeting.tex $(TEMPLATE_SRCS) $(INCLUDE_SRCS) $(AGENDA_SRCS)
+	$(CC) $<
 	make fresh
 	
 fresh:
