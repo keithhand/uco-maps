@@ -53,3 +53,4 @@ build-iPhoneSimulator/
 *.pdf
 *.out
 *.aux
+*.log
