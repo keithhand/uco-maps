@@ -54,3 +54,4 @@ build-iPhoneSimulator/
 *.out
 *.aux
 *.log
+*.gz
