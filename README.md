@@ -1,26 +1,17 @@
-# README
+# se-project
+> Test description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of contents
+* [Setup](#setup)
 
-Things you may want to cover:
+## General Info
 
-* Ruby version
+## Screenshots
 
-* System dependencies
+## Technologies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-## Local editing instructions
-
+## Setup
+#### Setting up local webpage editing
   - In order to deploy locally I am assuming have docker already installed. If you are using Windows, load 'Docker Quickstart Terminal'; otherwise, load your default terminal emulator.
     - _**IMPORTANT**: If you are using Windows, you have to use [this](https://github.com/docker/labs/issues/215#issuecomment-304596295) fix because of the way windows handles newline characters. After applying the fix, delete and reclone the project using git._
     
@@ -36,10 +27,7 @@ Things you may want to cover:
   - To view local changes it depends on your docker configuration. Docker will most of the time will host the project to your localhost but with Docker Toolbox it will designate a local ip
     - Most Scenarios: ``` http://localhost:3000/ ```
     - Docker Toolbox: ``` http://192.168.99.100:3000/ ``` 
-    
-  
-## Common commands
-
+#### Common commands
   - ``` docker-compose build ```
     - Used when there are major changes to the project and a full server rebuild is necessary. 
     
@@ -48,3 +36,12 @@ Things you may want to cover:
     
   - ``` docker-compose down ```
     - Used to stop the local server. 
+
+## Features
+* Easy to use Docker implementation
+To-do list:
+
+## Status
+Project is: _In Progress_
+
+## Contact
