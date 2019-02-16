@@ -15,10 +15,10 @@
 ## Screenshots
 
 ## Technologies
-* ruby            -   version x.x.x
-* postgresql      -   version x.x.x
-* docker          -   version x.x.x
-* docker-compose  -   version x.x.x
+* ruby            -   version 2.5.3
+* postgresql      -   version 11.2
+* docker          -   version 2.0.0.3
+* docker-compose  -   version 2
 
 ## Setup
 #### Setting up local webpage editing
