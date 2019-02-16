@@ -2,9 +2,15 @@
 > Test description
 
 ## Table of contents
+* [General Info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
 * [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Contact](#contact)
 
-## General Info
+## General info
 
 ## Screenshots
 
