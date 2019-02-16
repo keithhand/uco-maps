@@ -49,6 +49,7 @@
 
 ## Features
 * Easy to use Docker implementation.
+
 To-do list:
 * Easy to use UX allowing users to select two locations via map or list and get directions using a responsive UI.
 * Advanced search options such as handicap accessible directions.
@@ -58,4 +59,4 @@ To-do list:
 Project is: _In Progress_
 
 ## Development team
-Createad in collaboration by [@keith.hand](http://www.github.com/tsioM), [](), [](), []()
+Createad in collaboration by [@keith.hand](http://www.github.com/tsioM), [](), [](), & []().
