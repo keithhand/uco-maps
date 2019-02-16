@@ -1,7 +1,7 @@
 # se-project
-> A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings.
+> [Live demo](http://uptownok.com/ucomap)<br><br>A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings. 
 
-## Table of contents
+## Table of contents 
 * [General Info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
@@ -50,7 +50,7 @@
 ## Features
 * Easy to use Docker implementation.
 To-do list:
-* Easy to use UX allowing users to select two locations via msp or list and get directions using a responsive UI.
+* Easy to use UX allowing users to select two locations via map or list and get directions using a responsive UI.
 * Advanced search options such as handicap accessible directions.
 * Admin panel to add/edit/remove database entries.
 
