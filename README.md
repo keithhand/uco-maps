@@ -11,6 +11,9 @@
 * [Development Team](#development-team)
 
 ## General info
+#### Campus Map Service for Wheelchair Users
+  - As UCO is a college campus home to many buildings, new (and even old) students often times get confused on where to go. Finding the correct route can be an even more trivial task however for people in wheelchairs as they must navigate around common day obstacles such as stairs, curbs, etc. Focusing on that quality of life change for wheelchair users, the given application will allow not only wheelchair users, but rather any individual who wishes for guidance across campus.
+
 
 ## Screenshots
 
@@ -59,4 +62,4 @@ To-do list:
 Project is: _In Progress_
 
 ## Development team
-Createad in collaboration by [@keith.hand](http://www.github.com/tsioM), [](), [](), & []().
+Createad in collaboration by [@keith.hand](http://www.github.com/tsioM), [@jesse.quach](http://www.github.com/jessequach), [](), & []().
