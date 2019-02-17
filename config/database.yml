@@ -17,7 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: 68.97.88.243
+  host: evduskd-dev.hand.technology
   username: postgres
   password: 
   # For details on connection pooling, see Rails configuration guide
