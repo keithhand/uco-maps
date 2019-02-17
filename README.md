@@ -61,4 +61,4 @@ To-do list:
 Project is: _In Progress_
 
 ## Development team
-Created in collaboration by [@keith.hand](http://www.github.com/tsioM), [@jesse.quach](http://www.github.com/jessequach), [](), & []().
+Created in collaboration by [@keith.hand](http://www.github.com/tsioM), [@jesse.quach](http://www.github.com/jessequach), [@logan.thurm](http://www.github.com/Thurm0hi4), & []().
