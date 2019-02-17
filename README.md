@@ -1,34 +1,37 @@
-# README
+# se-project
+> [Live demo](http://uptownok.com/ucomap/app)<br><br>A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of contents 
+* [General Info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Development Team](#development-team)
 
-Things you may want to cover:
+## General info
+As the University of Central Oklahoma is a college campus home to many buildings, new (and even old) students often times get confused on where to go. Finding the correct route can be an even more trivial task however for people in wheelchairs as they must navigate around common day obstacles such as stairs, curbs, etc. Focusing on the quality of life change for students, the given application will allow not only be for wheelchair users, but rather any individual who wishes for guidance across campus.
 
-* Ruby version
 
-* System dependencies
+## Screenshots
 
-* Configuration
+## Technologies
+* ruby            -   version 2.5.3
+* postgresql      -   version 11.2
+* docker          -   version 2.0.0.3
+* docker-compose  -   version 2
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-## Local editing instructions
-
+## Setup
+#### Setting up local webpage editing
   - In order to deploy locally I am assuming have docker already installed. If you are using Windows, load 'Docker Quickstart Terminal'; otherwise, load your default terminal emulator.
     - _**IMPORTANT**: If you are using Windows, you have to use [this](https://github.com/docker/labs/issues/215#issuecomment-304596295) fix because of the way windows handles newline characters. After applying the fix, delete and reclone the project using git._
     
   - Locate your project directory and cd into it 
-    - ``` ex. cd Documents/School/se-project ```.
+    - ``` ex. cd Documents/School/se-project ```
     
   - You must first build the project with 
-    - ``` docker-compose build ```.
+    - ``` docker-compose build ```
   
   - Next you just have to start the docker container up on your system. 
     - ``` docker-compose up -d ```
@@ -36,10 +39,7 @@ Things you may want to cover:
   - To view local changes it depends on your docker configuration. Docker will most of the time will host the project to your localhost but with Docker Toolbox it will designate a local ip
     - Most Scenarios: ``` http://localhost:3000/ ```
     - Docker Toolbox: ``` http://192.168.99.100:3000/ ``` 
-    
-  
-## Common commands
-
+#### Common commands
   - ``` docker-compose build ```
     - Used when there are major changes to the project and a full server rebuild is necessary. 
     
@@ -48,3 +48,17 @@ Things you may want to cover:
     
   - ``` docker-compose down ```
     - Used to stop the local server. 
+
+## Features
+* Easy to use Docker implementation.
+
+To-do list:
+* Easy to use UX allowing users to select two locations via map or list and get directions using a responsive UI.
+* Advanced search options such as handicap accessible directions.
+* Admin panel to add/edit/remove database entries.
+
+## Status
+Project is: _In Progress_
+
+## Development team
+Created in collaboration by [@keith.hand](http://www.github.com/tsioM), [@jesse.quach](http://www.github.com/jessequach), [](), & []().
