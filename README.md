@@ -13,14 +13,19 @@
 ## General info
 As the University of Central Oklahoma is a college campus home to many buildings, new (and even old) students often times get confused on where to go. Finding the correct route can be an even more trivial task however for people in wheelchairs as they must navigate around common day obstacles such as stairs, curbs, etc. Focusing on the quality of life change for students, the given application will allow not only be for wheelchair users, but rather any individual who wishes for guidance across campus.
 
+[Back to top](#se-project)
+
 
 ## Screenshots
+[Back to top](#se-project)
 
 ## Technologies
 * ruby            -   version 2.5.3
 * postgresql      -   version 11.2
 * docker          -   version 2.0.0.3
 * docker-compose  -   version 2
+
+[Back to top](#se-project)
 
 ## Setup
 #### Setting up local webpage editing
@@ -47,7 +52,10 @@ As the University of Central Oklahoma is a college campus home to many buildings
     - Used to start the local server. Uses the docker-compose.yml file with the detach command to allow for closing of the terminal.
     
   - ``` docker-compose down ```
-    - Used to stop the local server. 
+    - Used to stop the local server.
+    
+    
+[Back to top](#se-project)
 
 ## Features
 * Easy to use Docker implementation.
@@ -57,8 +65,14 @@ To-do list:
 * Advanced search options such as handicap accessible directions.
 * Admin panel to add/edit/remove database entries.
 
+[Back to top](#se-project)
+
 ## Status
 Project is: _In Progress_
 
+[Back to top](#se-project)
+
 ## Development team
 Created in collaboration by [@keith.hand](http://www.github.com/tsioM), [@jesse.quach](http://www.github.com/jessequach), [@logan.thurm](http://www.github.com/Thurm0hi4), & []().
+
+[Back to top](#se-project)
