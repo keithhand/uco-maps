@@ -1,5 +1,5 @@
 # se-project
-> [Live demo](http://uptownok.com/ucomap/app)<br><br>A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings. 
+> [Live demo](http://uptownok.com/)<br><br>A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings. 
 
 ## Table of contents 
 * [General Info](#general-info)
@@ -42,8 +42,8 @@ As the University of Central Oklahoma is a college campus home to many buildings
     - ``` docker-compose up -d ```
   
   - To view local changes it depends on your docker configuration. Docker will most of the time will host the project to your localhost but with Docker Toolbox it will designate a local ip
-    - Most Scenarios: ``` http://localhost:3000/ ```
-    - Docker Toolbox: ``` http://192.168.99.100:3000/ ``` 
+    - Most Scenarios: ``` http://localhost/ ```
+    - Docker Toolbox: ``` http://192.168.99.100/ ``` 
 #### Common commands
   - ``` docker-compose build ```
     - Used when there are major changes to the project and a full server rebuild is necessary. 
