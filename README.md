@@ -3,7 +3,7 @@
 
 ## Table of contents 
 * [General Info](#general-info)
-* [Screenshots](#screenshots)
+* [Images](#images)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -16,7 +16,9 @@ As the University of Central Oklahoma is a college campus home to many buildings
 [Back to top](#se-project)
 
 
-## Screenshots
+## Images
+![Mark-up](https://cdn.discordapp.com/attachments/539632786693292062/545767602816024577/20190214_184434.jpg "Image mark-up by Logan Thurm")
+
 [Back to top](#se-project)
 
 ## Technologies
