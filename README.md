@@ -40,8 +40,11 @@ As the University of Central Oklahoma is a college campus home to many buildings
   - You must first build the project with 
     - ``` docker-compose build ```
   
-  - Next you just have to start the docker container up on your system. 
+  - Next you just have to start the docker container up on your system
     - ``` docker-compose up -d ```
+    
+  - After starting the container, you will need to create the database so that the app knows what info to pull for the site
+    - ``` docker-compose run web rake db:create ```    
   
   - To view local changes it depends on your docker configuration. Docker will most of the time will host the project to your localhost but with Docker Toolbox it will designate a local ip
     - Most Scenarios: ``` http://localhost/ ```
@@ -53,8 +56,14 @@ As the University of Central Oklahoma is a college campus home to many buildings
   - ``` docker-compose up -d ```
     - Used to start the local server. Uses the docker-compose.yml file with the detach command to allow for closing of the terminal.
     
+  - ``` docker-compose run web rake db:create ```
+    - Used to create the database that is stored on your localhost. If a server rebuild is necessary, this command will have to be input after you start the server.
+    
   - ``` docker-compose down ```
     - Used to stop the local server.
+    
+  - ``` docker logs se_project_web_1 ```
+    - Used to check the logs for the ruby application. Can be useful if there is something that is not quite working on your localhost.
     
     
 [Back to top](#se-project)
