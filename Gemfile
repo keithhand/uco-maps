@@ -61,4 +61,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'google_maps_service'
+# Gem for displaying and calculating directions using Google Maps
+gem 'gmaps4rails'
