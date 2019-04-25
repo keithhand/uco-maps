@@ -1,4 +1,5 @@
 class BuildingsController < ApplicationController
+  http_basic_authenticate_with :name => ENV['EDITOR_USERNAME'], :password => ENV['EDITOR_PASSWORD']
   before_action :set_building, only: [:show, :edit, :update, :destroy]
 
   # GET /buildings
