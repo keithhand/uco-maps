@@ -66,3 +66,5 @@ gem 'gmaps4rails'
 
 # Gem for geocoding data so we don't have to find general address location
 gem 'geocoder'
+
+gem 'jquery-rails'
