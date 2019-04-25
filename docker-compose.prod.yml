@@ -15,6 +15,8 @@ services:
 #      - LETSENCRYPT_HOST=www.uptownok.com
 #      - LETSENCRYPT_EMAIL=keith@hand.technology
       - VIRTUAL_PORT=3000
+    env_file:
+      - .env
     depends_on:
       - db
 
