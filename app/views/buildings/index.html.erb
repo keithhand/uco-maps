@@ -5,10 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>Title</th>
       <th>Latitude</th>
       <th>Longitude</th>
-      <th>Address</th>
-      <th>Title</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +15,9 @@
   <tbody>
     <% @buildings.each do |building| %>
       <tr>
+        <td><%= building.title %></td>
         <td><%= building.latitude %></td>
         <td><%= building.longitude %></td>
-        <td><%= building.address %></td>
-        <td><%= building.title %></td>
         <td><%= link_to 'Show', building %></td>
         <td><%= link_to 'Edit', edit_building_path(building) %></td>
         <td><%= link_to 'Destroy', building, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,5 +27,5 @@
 </table>
 
 <br>
-
+<%= link_to 'Home', root_path %>
 <%= link_to 'New Building', new_building_path %>

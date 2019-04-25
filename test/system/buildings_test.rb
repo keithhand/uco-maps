@@ -14,7 +14,6 @@ class BuildingsTest < ApplicationSystemTestCase
     visit buildings_url
     click_on "New Building"
 
-    fill_in "Address", with: @building.address
     fill_in "Latitude", with: @building.latitude
     fill_in "Longitude", with: @building.longitude
     fill_in "Title", with: @building.title
@@ -28,7 +27,6 @@ class BuildingsTest < ApplicationSystemTestCase
     visit buildings_url
     click_on "Edit", match: :first
 
-    fill_in "Address", with: @building.address
     fill_in "Latitude", with: @building.latitude
     fill_in "Longitude", with: @building.longitude
     fill_in "Title", with: @building.title
