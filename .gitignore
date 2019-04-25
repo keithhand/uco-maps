@@ -29,3 +29,6 @@
 
 # Ignore Dank Google Drive desktop.ini
 desktop.ini
+
+# Ignore main .env file for security
+.env
