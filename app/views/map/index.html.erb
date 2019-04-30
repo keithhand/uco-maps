@@ -13,21 +13,21 @@
 </div>
 
 <!--Search Bars-->
-<div class="input-group" id="Search-Bars">
+<form class="input-group" id="Search-Bars">
     <select type="text" placeholder="Starting Position" class="form-control">
         <option selected disabled hidden>Select a start building...</option>
         <% @buildings.each do |building| %>
-            <option><%= building.title %></option>
+            <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
     </select>
     <select type="text" placeholder="Ending Position" class="form-control">
         <option selected disabled hidden>Select an end building...</option>
         <% @buildings.each do |building| %>
-            <option><%= building.title %></option>
+            <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
     </select>
     <button class="btn btn-primary">Start Search</button>
-</div>
+</form>
 
 <!--Main Map-->
 <div class="container-fluid" id="Map">
@@ -42,16 +42,20 @@
     function initMap() {
         handler = Gmaps.build('Google');
         handler.buildMap({ 
-            provider: {}, 
+            provider: {
+                center: {lat: 35.6558, lng: -97.4715},
+                zoom: 16.7,
+                disableDefaultUI: true
+            }, 
             internal: {
                 id: 'map'
             }
             }, 
             function() {
                 markers = handler.addMarkers(<%=raw @hash.to_json %>);
-                handler.bounds.extendWith(markers);
-                handler.fitMapToBounds();
-            }
+                //handler.bounds.extendWith(markers);
+                //handler.fitMapToBounds();
+            },
         );
     }
 

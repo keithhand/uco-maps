@@ -35,7 +35,7 @@
     margin: 60px auto 100px auto;
 }
 
-#Search-Bars > select {
+#Search-Bars > select, button {
     margin: 0 5px;
 }
 
@@ -46,6 +46,7 @@
     border-style: solid;
     border-width: 1px;
     /* border: #000000; */
+    pointer-events: none;
 }
 
 #map-img{
