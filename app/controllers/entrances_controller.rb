@@ -1,10 +1,12 @@
 class EntrancesController < ApplicationController
+  http_basic_authenticate_with :name => ENV['EDITOR_USERNAME'], :password => ENV['EDITOR_PASSWORD']
   before_action :set_entrance, only: [:show, :edit, :update, :destroy]
 
   # GET /entrances
   # GET /entrances.json
   def index
     @entrances = Entrance.all
+    @buildings = Building.all
   end
 
   # GET /entrances/1
@@ -16,11 +18,11 @@ class EntrancesController < ApplicationController
   def new
     @entrance = Entrance.new
   end
-
+  
   # GET /entrances/1/edit
   def edit
   end
-
+  
   # POST /entrances
   # POST /entrances.json
   def create
