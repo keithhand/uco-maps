@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>Building</th>
       <th>Latitude</th>
       <th>Longitude</th>
-      <th>Building</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @entrances.each do |entrance| %>
       <tr>
+        <td><%= entrance.building.title %></td>
         <td><%= entrance.latitude %></td>
         <td><%= entrance.longitude %></td>
-        <td><%= entrance.building %></td>
         <td><%= link_to 'Show', entrance %></td>
         <td><%= link_to 'Edit', edit_entrance_path(entrance) %></td>
         <td><%= link_to 'Destroy', entrance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,5 +27,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Entrance', new_entrance_path %>

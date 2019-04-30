@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Building:</strong>
+  <%= @entrance.building.title %>
+</p>
+
+<p>
   <strong>Latitude:</strong>
   <%= @entrance.latitude %>
 </p>
@@ -8,11 +13,6 @@
 <p>
   <strong>Longitude:</strong>
   <%= @entrance.longitude %>
-</p>
-
-<p>
-  <strong>Building:</strong>
-  <%= @entrance.building %>
 </p>
 
 <%= link_to 'Edit', edit_entrance_path(@entrance) %> |
