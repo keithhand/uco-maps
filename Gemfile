@@ -63,8 +63,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gem for displaying and calculating directions using Google Maps
 gem 'gmaps4rails'
+gem 'google_maps_service'
 
-# Gem for geocoding data so we don't have to find general address location
-gem 'geocoder'
-
+# Jquery Gem
 gem 'jquery-rails'
+
+# Bootstrap
+gem 'bootstrap', '~> 4.3.1'
