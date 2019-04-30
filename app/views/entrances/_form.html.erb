@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :building_id %>
-    <%= form.text_field :building_id %>
+    <%= form.select :building_id, Building.all.collect { |b| [ b.title, b.id ]}, include_blank: false %>
   </div>
 
   <div class="field">
