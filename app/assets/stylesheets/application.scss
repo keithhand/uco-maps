@@ -15,6 +15,7 @@
 @import 'bootstrap';
 @import 'selectize';
 @import 'selectize.bootstrap3';
+@import 'scaffolds.scss';
 
 #title-container{
     background-color: #003366;
@@ -32,6 +33,10 @@
 #Search-Bars {
     width: 60%;
     margin: 60px auto 100px auto;
+}
+
+#Search-Bars > input{
+    margin: 0 5px;
 }
 
 #map {
