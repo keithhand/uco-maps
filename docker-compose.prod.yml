@@ -10,13 +10,13 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/myapp
-    environment:
-      - VIRTUAL_HOST=uptownok.com, www.uptownok.com
-#      - LETSENCRYPT_HOST=www.uptownok.com
-#      - LETSENCRYPT_EMAIL=keith@hand.technology
-      - VIRTUAL_PORT=3000
     env_file:
       - .env
+    environment:
+      - VIRTUAL_HOST=uptownok.com, www.uptownok.com
+      - LETSENCRYPT_HOST=www.uptownok.com
+      - LETSENCRYPT_EMAIL=keith@hand.technology
+      - VIRTUAL_PORT=3000
     depends_on:
       - db
 
