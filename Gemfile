@@ -70,3 +70,6 @@ gem 'jquery-rails'
 
 # Bootstrap
 gem 'bootstrap', '~> 4.3.1'
+
+# Selectize
+gem 'selectize-rails'
