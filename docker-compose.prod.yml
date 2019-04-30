@@ -14,8 +14,8 @@ services:
       - .env
     environment:
       - VIRTUAL_HOST=uptownok.com, www.uptownok.com
-#      - LETSENCRYPT_HOST=www.uptownok.com
-#      - LETSENCRYPT_EMAIL=keith@hand.technology
+      - LETSENCRYPT_HOST=www.uptownok.com
+      - LETSENCRYPT_EMAIL=keith@hand.technology
       - VIRTUAL_PORT=3000
     depends_on:
       - db
