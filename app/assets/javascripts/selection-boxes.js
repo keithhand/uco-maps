@@ -7,4 +7,6 @@ $(document).ready(function() {
     $("select#endPos").children("option:eq(" + selectedStartBuilding + ")").hide();
     $("select#endPos").val(0);
   })
+
+  $("#directions").find("div")[0].remove();
 });

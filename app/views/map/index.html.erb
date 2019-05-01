@@ -37,7 +37,21 @@
 
     <!-- Sidebar with Directions -->
     <div class="col-3" id="directions">
-        Pariatur do aliqua aute sint elit in et reprehenderit sunt aute ipsum reprehenderit. Dolor proident aute dolore fugiat dolor aliqua ullamco amet ut eu deserunt. Voluptate esse Lorem laborum est dolor. Est officia consequat nisi pariatur ad eu. Cillum ullamco aliqua aute magna deserunt ad eiusmod aliqua. Duis ipsum eu veniam deserunt magna adipisicing pariatur et qui. Aliqua enim reprehenderit voluptate sit.
+        <% if @directions %>
+            <h3>Directions:</h3>
+            <% @directions.each_with_index do |step, index| %>
+                <%= step[0].html_safe %>
+                <% if index.even?%>
+                     and walk
+                <% end %>
+                <% if !index.even? %>
+                    <br>
+                    <br>
+                <% end %>
+            <% end %>
+        <% else %>
+            Put some instruction bois here
+        <% end %>
     </div>
 </div> <!-- End Map Row -->
 
