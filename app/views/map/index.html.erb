@@ -7,21 +7,21 @@
 
 <!--Title Container-->
 <div class="container-fluid" id="title-container">
-<a href="https://www.uco.edu/" style="background-color: transparent;">
-    <%= image_tag("UCO Logo.png", :id => "UCO-Logo") %>
-</a>
+    <a href="https://www.uco.edu/" style="background-color: transparent;">
+        <%= image_tag("UCO Logo.png", :id => "UCO-Logo") %>
+    </a>
 </div>
 
 <!--Search Bars-->
 <form class="input-group" id="Search-Bars">
-    <select type="text" placeholder="Starting Position" class="form-control">
-        <option selected disabled hidden>Select a start building...</option>
+    <select id="startPos" type="text" class="form-control">
+        <option value="0" selected disabled hidden>Select a start building...</option>
         <% @buildings.each do |building| %>
             <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
     </select>
-    <select type="text" placeholder="Ending Position" class="form-control">
-        <option selected disabled hidden>Select an end building...</option>
+    <select id="endPos" type="text" class="form-control">
+        <option value="0" selected disabled hidden>Select an end building...</option>
         <% @buildings.each do |building| %>
             <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
@@ -31,10 +31,8 @@
 
 <!--Main Map-->
 <div class="container-fluid" id="Map">
-<!-- Google Maps -->
-<%# <div style='width: 800px;'> %>
-    <div id="map"></div>
-<%# </div> %>
+    <div id="map">
+</div>
 
 <%= link_to 'Edit Buildings', buildings_path %>
 
@@ -52,9 +50,7 @@
             }
             }, 
             function() {
-                markers = handler.addMarkers(<%=raw @hash.to_json %>);
-                //handler.bounds.extendWith(markers);
-                //handler.fitMapToBounds();
+                markers = handler.addMarkers(<%= raw @hash.to_json %>);
             },
         );
     }
@@ -63,6 +59,7 @@
         handler = null;
         initMap();
     });
-    </script>
+
+</script>
 </div>
 <!-- End Map -->
