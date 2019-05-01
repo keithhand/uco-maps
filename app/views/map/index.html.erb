@@ -5,8 +5,6 @@
     <a href="https://www.uco.edu/" style="background-color: transparent;">
         <%= image_tag("UCO Logo.png", :id => "UCO-Logo") %>
     </a>
-
-
 </div>
 
 <!--Search Bars-->
@@ -30,7 +28,6 @@
 <div class="row" id="map-row">
     <!--Main Map-->
     <div class="col-9 container-fluid" id="Map">
-        <!-- Google Maps -->
         <div id="map"></div>
     </div>  
     <!-- End Map -->
@@ -69,17 +66,21 @@
             provider: {
                 center: {lat: 35.6558, lng: -97.4715},
                 zoom: 16.7,
-                disableDefaultUI: true
+                disableDefaultUI: true,
             }, 
             internal: {
                 id: 'map'
             }
             }, 
             function() {
-                markers = handler.addMarkers(<%= raw @hash.to_json %>);
-            },
-        );
-    }
+            markers = handler.addMarkers(<%= raw @hash.to_json %>);
+        }),
+        <% @encryptedPolyline.each_with_index do |data, index| %>
+            handler.addPolyline(
+                <%= GoogleMapsService::Polyline.decode(@encryptedPolyline[index]).to_json.html_safe %>,
+            );
+        <% end %>
+    };
 
     $( document ).ready(function() {
         handler = null;

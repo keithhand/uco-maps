@@ -4,6 +4,7 @@ class MapController < ApplicationController
     @directions = params[:directions]
     @error = params[:error_code]
     @hash = params[:markers]
+    @encryptedPolyline = params[:encryptedPolyline]
     @debugvar = params[:debugvar]
   end
 
@@ -59,13 +60,15 @@ class MapController < ApplicationController
 
     # Build directions array to pass back to index
     @directions = Array.new(@routes[0][:legs][0][:steps].count) { Array.new(2) }
+    @encryptedPolyline = Array.new(@routes[0][:legs][0][:steps].count)
     @routes[0][:legs][0][:steps].each_with_index do |routes, index|
         @directions[index][0] = routes[:html_instructions]
         @directions[index][1] = routes[:distance][:text]
+        @encryptedPolyline[index] = routes[:polyline][:points]
     end
 
     # Redirect back to homepage with information gathered
-    redirect_to root_path(directions: @directions, markers: @hash, debugvar: @shortestStartIndex)
+    redirect_to root_path(directions: @directions, markers: @hash, encryptedPolyline: @encryptedPolyline, debugvar: @encryptedPolyline)
   end
 
 end
