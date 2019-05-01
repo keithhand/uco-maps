@@ -74,11 +74,14 @@
             }, 
             function() {
             markers = handler.addMarkers(<%= raw @hash.to_json %>);
-        }),
-        <% @encryptedPolyline.each_with_index do |data, index| %>
-            handler.addPolyline(
-                <%= GoogleMapsService::Polyline.decode(@encryptedPolyline[index]).to_json.html_safe %>,
-            );
+        })
+        <% if @encryptedPolyline %>
+        ,
+            <% @encryptedPolyline.each_with_index do |data, index| %>
+                handler.addPolyline(
+                    <%= GoogleMapsService::Polyline.decode(@encryptedPolyline[index]).to_json.html_safe %>,
+                );
+            <% end %>
         <% end %>
     };
 
