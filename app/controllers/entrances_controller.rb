@@ -71,6 +71,6 @@ class EntrancesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entrance_params
-      params.require(:entrance).permit(:latitude, :longitude, :building_id)
+      params.require(:entrance).permit(:latitude, :longitude, :building_id, :handicap)
     end
 end
