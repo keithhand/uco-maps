@@ -1,11 +1,14 @@
 class MapController < ApplicationController
   def index
     @buildings = Building.all
+    @entrances = Entrance.all
     @directions = params[:directions]
     @error = params[:error_code]
     @hash = params[:markers]
     @encryptedPolyline = params[:encryptedPolyline]
     @debugvar = params[:debugvar]
+    @startBuildingID = params[:startBuildingID]
+    @endBuildingID = params[:endBuildingID]
   end
 
   # GET /map
@@ -24,7 +27,21 @@ class MapController < ApplicationController
     @shortestStartIndex = 0
     @shortestEndIndex = 0
 
-    # Check for handicap entrances
+    # Check for handicap entrances and remove if they exist
+    if (!@startEntrances.where(handicap: true).empty?)
+      @startEntrances.each_with_index do |data, index|
+        if (!data.handicap)
+          @startEntrances.delete(index)
+        end
+      end
+    end
+    if (!@endEntrances.where(handicap: true).empty?)
+      @endEntrances.each_with_index do |data, index|
+        if (!data.handicap)
+          @endEntrances.delete(index)
+        end
+      end
+    end
 
     # Find shortest distance between all entrances
     @startEntrances.each_with_index do |startPoint, startIndex|
@@ -68,7 +85,7 @@ class MapController < ApplicationController
     end
 
     # Redirect back to homepage with information gathered
-    redirect_to root_path(directions: @directions, markers: @hash, encryptedPolyline: @encryptedPolyline, debugvar: @encryptedPolyline)
+    redirect_to root_path(directions: @directions, markers: @hash, encryptedPolyline: @encryptedPolyline, startBuildingID: params[:startBuildingID], endBuildingID: params[:endBuildingID], debugvar: @startLocation)
   end
 
 end
