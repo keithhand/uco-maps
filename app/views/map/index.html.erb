@@ -12,21 +12,20 @@
 </div>
 
 <!--Search Bars-->
-<form class="input-group" id="Search-Bars">
-    <select id="startPos" type="text" class="form-control">
+<form class="input-group" id="Search-Bars" action="/map/search">
+    <select id="startPos" name="startBuildingID" type="text" class="form-control" form="Search-Bars">
         <option value="0" selected disabled hidden>Select a start building...</option>
-
         <% @buildings.each do |building| %>
             <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
     </select>
-    <select id="endPos" type="text" class="form-control">
+    <select id="endPos" name="endBuildingID" type="text" class="form-control" form="Search-Bars">
         <option value="0" selected disabled hidden>Select an end building...</option>
         <% @buildings.each do |building| %>
             <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
     </select>
-    <button class="btn btn-primary">Start Search</button>
+    <input type="submit" class="btn btn-primary" value="Start Search">
 </form>
 
 <!--Main Map-->
