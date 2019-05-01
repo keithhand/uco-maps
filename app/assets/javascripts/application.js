@@ -16,8 +16,10 @@
 //= require underscore
 //= require gmaps/google
 //= require jquery3
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
 //= require selectize
 //= require_tree .
+//= require turbolinks
