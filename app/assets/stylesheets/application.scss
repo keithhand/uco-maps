@@ -52,7 +52,7 @@ body {
 }
 
 #map-row {
-    margin: 0 auto 200px auto;
+    margin: 0 auto 0 auto;
     width: 80%;
     height: 60vh;
     border-style: solid;
@@ -70,8 +70,11 @@ body {
 }
 
 #footer-row {
+    position: absolute;
     background-color: #003366;
     height: 50px;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
