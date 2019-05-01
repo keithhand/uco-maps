@@ -17,7 +17,7 @@
             <option value="<%= building.id %>"><%= building.title %></option>
         <% end %>
     </select>
-    <select id="endPos" name="endBuildingID" type="text" class="form-control" form="Search-Bars">
+    <select id="endPos" name="endBuildingID" type="text" class="form-control" form="Search-Bars" style="display: none">
         <option value="0" selected disabled hidden>Select an end building...</option>
         <% @buildings.each do |building| %>
             <option value="<%= building.id %>"><%= building.title %></option>
@@ -42,7 +42,7 @@
             <% @directions.each_with_index do |step, index| %>
                 <%= step[0].html_safe %>
                 <% if index.even?%>
-                     and walk
+                     and travel
                 <% end %>
                 <% if !index.even? %>
                     <br>
