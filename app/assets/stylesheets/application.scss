@@ -34,6 +34,14 @@ body {
     background-color: transparent;
 }
 
+#buildings-link, #entrances-link {
+    color: #ffffff;
+}
+
+#buildings-link:hover, #entrances-link:hover {
+    background-color: transparent;
+}
+
 #Search-Bars {
     width: 60%;
     margin: 60px auto 100px auto;
@@ -44,7 +52,7 @@ body {
 }
 
 #map-row {
-    margin: 0 auto;
+    margin: 0 auto 200px auto;
     width: 80%;
     height: 60vh;
     border-style: solid;
@@ -57,12 +65,13 @@ body {
     height: 100%;
 }
 
-#map-img{
-    height: 500px;
-}
-
 #Map{
     padding: 0 !important;
+}
+
+#footer-row {
+    background-color: #003366;
+    height: 50px;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -82,4 +91,12 @@ body {
 #directions {
     font-family: 'Noto Sans', sans-serif;
     background-color: #9fbdc2;
+}
+
+#margin-wrapper {
+    margin: 50px;
+}
+
+#table-buttons > a {
+    margin: 10px;
 }

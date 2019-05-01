@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div id="margin-wrapper">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Building:</strong>
-  <%= @entrance.building.title %>
-</p>
+  <p>
+    <strong>Building:</strong>
+    <%= @entrance.building.title %>
+  </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @entrance.latitude %>
-</p>
+  <p>
+    <strong>Latitude:</strong>
+    <%= @entrance.latitude %>
+  </p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @entrance.longitude %>
-</p>
+  <p>
+    <strong>Longitude:</strong>
+    <%= @entrance.longitude %>
+  </p>
 
-<p>
-  <strong>Handicap:</strong>
-  <%= @entrance.handicap %>
-</p>
+  <p>
+    <strong>Handicap:</strong>
+    <%= @entrance.handicap %>
+  </p>
 
-<%= link_to 'Edit', edit_entrance_path(@entrance) %> |
-<%= link_to 'Back', entrances_path %>
+  <%= link_to 'Edit', edit_entrance_path(@entrance) %> |
+  <%= link_to 'Back', entrances_path %>
+</div>

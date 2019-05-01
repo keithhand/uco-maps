@@ -1,34 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Entrances</h1>
+<div class="wrapper" id="margin-wrapper">
+  <h1>Entrances</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Building</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Handicap</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @entrances.order(:building_id).each do |entrance| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= entrance.building.title %></td>
-        <td><%= entrance.latitude %></td>
-        <td><%= entrance.longitude %></td>
-        <td><%= entrance.handicap %></td>
-        <td><%= link_to 'Show', entrance %></td>
-        <td><%= link_to 'Edit', edit_entrance_path(entrance) %></td>
-        <td><%= link_to 'Destroy', entrance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Building</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Handicap</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-<%= link_to 'Home', root_path %>
-<%= link_to 'New Entrance', new_entrance_path %>
-<%= link_to 'Back', buildings_path %>
+    <tbody>
+      <% @entrances.order(:building_id).each do |entrance| %>
+        <tr>
+          <td><%= entrance.building.title %></td>
+          <td><%= entrance.latitude %></td>
+          <td><%= entrance.longitude %></td>
+          <td><%= entrance.handicap %></td>
+          <td><%= link_to 'Show', entrance %></td>
+          <td><%= link_to 'Edit', edit_entrance_path(entrance) %></td>
+          <td><%= link_to 'Destroy', entrance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <div id="table-buttons">
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'New Entrance', new_entrance_path %>
+    <%= link_to 'Buildings', buildings_path %>
+  </div>
+
+</div>

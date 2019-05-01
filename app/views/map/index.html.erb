@@ -5,6 +5,8 @@
     <a href="https://www.uco.edu/" style="background-color: transparent;">
         <%= image_tag("UCO Logo.png", :id => "UCO-Logo") %>
     </a>
+
+
 </div>
 
 <!--Search Bars-->
@@ -51,9 +53,14 @@
             Put some instruction bois here
         <% end %>
     </div>
-</div> <!-- End Row -->
+</div> <!-- End Map Row -->
 
-<%= link_to 'Edit Buildings', buildings_path %>
+
+<!-- Footer Row -->
+<div class="row align-items-center justify-content-center" id="footer-row">
+    <%= link_to 'Edit Buildings', buildings_path, :id => "buildings-link", :style => "margin-right: 30px;" %>
+    <%= link_to 'Edit Entrances', entrances_path, :id => "entrances-link" %>
+</div>
 
 <script type="text/javascript">
     function initMap() {
