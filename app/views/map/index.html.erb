@@ -36,15 +36,19 @@
     <!-- Sidebar with Directions -->
     <div class="col-3" id="directions">
         <% if @directions %>
+            <h3>Directions:</h3>
             <% @directions.each_with_index do |step, index| %>
                 <%= step[0].html_safe %>
                 <% if index.even?%>
-                     and walk 
+                     and walk
                 <% end %>
                 <% if !index.even? %>
                     <br>
+                    <br>
                 <% end %>
             <% end %>
+        <% else %>
+            Put some instruction bois here
         <% end %>
     </div>
 </div> <!-- End Row -->
