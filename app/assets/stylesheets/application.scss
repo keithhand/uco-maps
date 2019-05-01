@@ -17,6 +17,10 @@
 @import 'selectize.bootstrap3';
 @import '/\*';
 
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 #title-container{
     background-color: #003366;
     color: #ffffff;
@@ -39,7 +43,7 @@
     margin: 0 5px;
 }
 
-#map {
+#map-row {
     margin: 0 auto;
     width: 80%;
     height: 60vh;
@@ -49,8 +53,16 @@
     pointer-events: none;
 }
 
+#map { 
+    height: 100%;
+}
+
 #map-img{
     height: 500px;
+}
+
+#Map{
+    padding: 0 !important;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -65,4 +77,9 @@
     min-height: 100%; */
     z-index: -1;
     transform: scale(1.6);
-  }
+}
+
+#directions {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #9fbdc2;
+}

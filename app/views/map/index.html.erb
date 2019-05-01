@@ -29,35 +29,35 @@
     <button class="btn btn-primary">Start Search</button>
 </form>
 
+
+<div class="row" id="map-row">
 <!--Main Map-->
-<div class="container-fluid" id="Map">
+<div class="col-9 container-fluid" id="Map">
 <!-- Google Maps -->
-<%# <div style='width: 800px;'> %>
     <div id="map"></div>
-<%# </div> %>
 
-<%= link_to 'Edit Buildings', buildings_path %>
+    <%= link_to 'Edit Buildings', buildings_path %>
 
-<script type="text/javascript">
-    function initMap() {
-        handler = Gmaps.build('Google');
-        handler.buildMap({ 
-            provider: {
-                center: {lat: 35.6558, lng: -97.4715},
-                zoom: 16.7,
-                disableDefaultUI: true
-            }, 
-            internal: {
-                id: 'map'
-            }
-            }, 
-            function() {
-                markers = handler.addMarkers(<%=raw @hash.to_json %>);
-                //handler.bounds.extendWith(markers);
-                //handler.fitMapToBounds();
-            },
-        );
-    }
+    <script type="text/javascript">
+        function initMap() {
+            handler = Gmaps.build('Google');
+            handler.buildMap({ 
+                provider: {
+                    center: {lat: 35.6558, lng: -97.4715},
+                    zoom: 16.7,
+                    disableDefaultUI: true
+                }, 
+                internal: {
+                    id: 'map'
+                }
+                }, 
+                function() {
+                    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+                    //handler.bounds.extendWith(markers);
+                    //handler.fitMapToBounds();
+                },
+            );
+        }
 
     $( document ).ready(function() {
         handler = null;
@@ -66,3 +66,8 @@
     </script>
 </div>
 <!-- End Map -->
+<!-- Sidebar with Directions -->
+    <div class="col-3" id="directions">
+        Pariatur do aliqua aute sint elit in et reprehenderit sunt aute ipsum reprehenderit. Dolor proident aute dolore fugiat dolor aliqua ullamco amet ut eu deserunt. Voluptate esse Lorem laborum est dolor. Est officia consequat nisi pariatur ad eu. Cillum ullamco aliqua aute magna deserunt ad eiusmod aliqua. Duis ipsum eu veniam deserunt magna adipisicing pariatur et qui. Aliqua enim reprehenderit voluptate sit.
+    </div>
+</div> <!-- End Row -->
