@@ -36,6 +36,9 @@
     <div class="col-3" id="directions">
         <% if @directions %>
             <h3>Directions:</h3>
+            <hr>            
+            <h6><em><%= @buildings.find(@startBuildingID).title %> - <%= @buildings.find(@endBuildingID).title %></em></h6>
+            <hr>
             <% @directions.each_with_index do |step, index| %>
                 <%= step[0].html_safe %>
                 <% if index.even?%>
