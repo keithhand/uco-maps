@@ -3,8 +3,7 @@ class MapController < ApplicationController
     @buildings = Building.all
     @directions = params[:directions]
     @error = params[:error_code]
-    @start = params[:start]
-    @end = params[:end]
+    @hash = params[:markers]
   end
 
   # GET /map
@@ -25,6 +24,13 @@ class MapController < ApplicationController
       mode: 'walking',
       alternatives: false)
 
+    @buildings = [@startBuilding, @endBuilding]
+    @hash = Gmaps4rails.build_markers(@buildings) do |building, marker|
+      marker.infowindow building.title
+      marker.lat building.latitude
+      marker.lng building.longitude
+    end
+
     @directions = Array.new(@routes[0][:legs][0][:steps].count) { Array.new(2) }
 
     @routes[0][:legs][0][:steps].each_with_index do |routes, index|
@@ -32,7 +38,7 @@ class MapController < ApplicationController
         @directions[index][1] = routes[:distance][:text]
     end
 
-    redirect_to root_path(directions: @directions)
+    redirect_to root_path(directions: @directions, markers: @hash)
   end
 
 end
