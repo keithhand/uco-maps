@@ -14,7 +14,7 @@
 
 <!--Search Bars-->
 <form class="input-group" id="Search-Bars">
-    <select type="text" placeholder="Starting Position" class="form-control">
+    <select type="text" placeholder="Starting Position" class="form-control" id="start-pos">
         <option selected disabled hidden>Select a start building...</option>
         <% @buildings.each do |building| %>
             <option value="<%= building.id %>"><%= building.title %></option>
