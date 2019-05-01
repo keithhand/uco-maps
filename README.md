@@ -1,5 +1,5 @@
 # se-project
-> [Live demo](uptownok.com/)<br><br>A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings. 
+> [Live demo](https://www.uptownok.com/)<br><br>A web application based in ruby that accesses a database of buildings at the University of Central Oklahoma and allows easy access to directions between any two buildings. 
 
 ## Table of contents 
 * [General Info](#general-info)
