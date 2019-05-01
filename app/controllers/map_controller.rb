@@ -16,12 +16,14 @@ class MapController < ApplicationController
 
     # Initialize variables and GMaps
     require 'google_maps_service'
-    gmaps = GoogleMapsService::Client.new(key: ENV['API_KEY'])
+    gmaps = GoogleMapsService::Client.new(key: ENV['IPRESTRICED_API_KEY'])
     @startEntrances = Entrance.where(building_id: params[:startBuildingID])
     @endEntrances = Entrance.where(building_id: params[:endBuildingID])
     @shortestDistance = -1
     @shortestStartIndex = 0
     @shortestEndIndex = 0
+
+    # Check for handicap entrances
 
     # Find shortest distance between all entrances
     @startEntrances.each_with_index do |startPoint, startIndex|
