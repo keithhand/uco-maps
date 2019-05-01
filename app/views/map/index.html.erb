@@ -5,6 +5,8 @@
     <a href="https://www.uco.edu/" style="background-color: transparent;">
         <%= image_tag("UCO Logo.png", :id => "UCO-Logo") %>
     </a>
+
+
 </div>
 
 <!--Search Bars-->
@@ -37,9 +39,14 @@
     <div class="col-3" id="directions">
         Pariatur do aliqua aute sint elit in et reprehenderit sunt aute ipsum reprehenderit. Dolor proident aute dolore fugiat dolor aliqua ullamco amet ut eu deserunt. Voluptate esse Lorem laborum est dolor. Est officia consequat nisi pariatur ad eu. Cillum ullamco aliqua aute magna deserunt ad eiusmod aliqua. Duis ipsum eu veniam deserunt magna adipisicing pariatur et qui. Aliqua enim reprehenderit voluptate sit.
     </div>
-</div> <!-- End Row -->
+</div> <!-- End Map Row -->
 
-<%= link_to 'Edit Buildings', buildings_path %>
+
+<!-- Footer Row -->
+<div class="row align-items-center justify-content-center" id="footer-row">
+    <%= link_to 'Edit Buildings', buildings_path, :id => "buildings-link", :style => "margin-right: 30px;" %>
+    <%= link_to 'Edit Entrances', entrances_path, :id => "entrances-link" %>
+</div>
 
 <script type="text/javascript">
     function initMap() {
