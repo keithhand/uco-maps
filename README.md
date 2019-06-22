@@ -79,7 +79,7 @@ To-do list:
 [Back to top](#se-project)
 
 ## Status
-Project is: _In Progress_
+Project is: _Complete_
 
 [Back to top](#se-project)
 
