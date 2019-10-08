@@ -84,6 +84,6 @@ Project is: _Complete_
 [Back to top](#se-project)
 
 ## Development team
-Created in collaboration by [@keith.hand](http://www.github.com/tsioM), [@jesse.quach](http://www.github.com/jessequach), [@logan.thurm](http://www.github.com/Thurm0hi4), & [@logan.anderson](https://github.com/LoganAnde).
+Created in collaboration by [@keith.hand](http://www.github.com/keithhand), [@jesse.quach](http://www.github.com/jessequach), [@logan.thurm](http://www.github.com/Thurm0hi4), & [@logan.anderson](https://github.com/LoganAnde).
 
 [Back to top](#se-project)
